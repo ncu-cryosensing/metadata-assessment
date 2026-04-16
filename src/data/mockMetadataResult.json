@@ -1,0 +1,27 @@
+{
+  "totalChecks": 8,
+  "passed": 3,
+  "warnings": 2,
+  "failed": 2,
+  "informational": 1,
+  "scores": {
+    "Findable": 77,
+    "Accessible": 57,
+    "Interoperable": 0,
+    "Reusable": 20
+  },
+  "passedChecks": [
+    "1 keyword was found.",
+    "The publication date '2020' was found...",
+    "A resource author/originator was found."
+  ],
+  "warningChecks": [
+    "No controlled keyword (from a vocabulary)...",
+    "This keyword does not have a type specified: 'demo'."
+  ],
+  "failedChecks": [
+    "The abstract word count is less than recommended.",
+    "No entity identifiers were found."
+  ],
+  "informationalCheck": "The resource type is: dataset"
+}

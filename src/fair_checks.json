@@ -1,0 +1,255 @@
+{
+  "checks": [
+
+    {
+      "id": "title_word_count",
+      "field": "title",
+      "type": "wordCount",
+      "min": 4,
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "The title contains {count} words. Meets the minimum recommended value of 4.",
+      "failureMsg": "The title contains {count} words. Minimum required is 4."
+    },
+
+    {
+      "id": "metadata_identifier_exists",
+      "field": "metadataIdentifier",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "The metadata identifier '{value}' was found.",
+      "failureMsg": "No identifiers were found."
+    },
+
+    {
+      "id": "creator_exists",
+      "field": "authors",
+      "type": "arrayNotEmpty",
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "One creator is present.",
+      "failureMsg": "Creator is missing."
+    },
+
+    {
+      "id": "creator_identifier_exists",
+      "field": "authors",
+      "type": "arrayNotEmpty",
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "One creator identifier is present.",
+      "failureMsg": "Creator identifier is missing."
+    },
+
+    {
+      "id": "creator_affiliation_exists",
+      "field": "authors",
+      "type": "arrayNotEmpty",
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "Creator affiliation is present.",
+      "failureMsg": "Creator affiliation is missing."
+    },
+
+    {
+      "id": "publication_date_exists",
+      "field": "publicationDate",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "A publication date is present.",
+      "failureMsg": "A publication date is missing."
+    },
+
+    {
+      "id": "doi_exists_findable",
+      "field": "doi",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "The digital object identifier '{value}' is present.",
+      "failureMsg": "Digital object identifier is missing."
+    },
+
+    {
+      "id": "short_description_word_count",
+      "field": "short_description",
+      "type": "wordCount",
+      "min": 20,
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "Short Description has {count} words. Meets the minimum recommended value of 20.",
+      "failureMsg": "Short Description has {count} words. Minimum recommended is 20."
+    },
+
+    {
+      "id": "documentation_word_count_findable",
+      "field": "documentation",
+      "type": "wordCount",
+      "min": 100,
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "Documentation has {count} words. Meets the minimum recommended value of 100.",
+      "failureMsg": "Documentation has {count} words. Minimum recommended is 100."
+    },
+
+    {
+      "id": "spatial_extent_exists",
+      "field": "spatialExtent",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Findable",
+      "successMsg": "A spatial extent is present.",
+      "failureMsg": "The spatial extent is missing."
+    },
+
+
+
+    {
+      "id": "corresponding_author_exists",
+      "field": "corresponding_author",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Accessible",
+      "successMsg": "The corresponding author is present.",
+      "failureMsg": "The corresponding author is missing."
+    },
+
+    {
+      "id": "doi_exists_accessible",
+      "field": "doi",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Accessible",
+      "successMsg": "The digital object identifier '{value}' is present.",
+      "failureMsg": "No digital object identifier is present."
+    },
+
+    {
+      "id": "metadata_public",
+      "field": "metadataIdentifier",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Accessible",
+      "successMsg": "The metadata is publicly available.",
+      "failureMsg": "The metadata is missing."
+    },
+
+    {
+      "id": "landing_page_url",
+      "field": "metadataIdentifier",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Accessible",
+      "successMsg": "A resource landing page url is present.",
+      "failureMsg": "A resource landing page url is missing."
+    },
+
+    {
+      "id": "download_url",
+      "field": "metadataIdentifier",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Accessible",
+      "successMsg": "A downloading url is present.",
+      "failureMsg": "A downloading url is missing."
+    },
+
+    {
+      "id": "interactive_map_optional",
+      "field": "metadataCode",
+      "type": "exists",
+      "level": "OPTIONAL",
+      "principle": "Accessible",
+      "successMsg": "Interactive map is present.",
+      "failureMsg": "Interactive map is missing."
+    },
+
+    {
+      "id": "taipihub_optional_accessible",
+      "field": "metadataCode",
+      "type": "exists",
+      "level": "OPTIONAL",
+      "principle": "Accessible",
+      "successMsg": "TaipiHUB is present.",
+      "failureMsg": "TaipiHUB is missing."
+    },
+
+    {
+      "id": "api_endpoint_exists_accessible",
+      "field": "metadataIdentifier",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Accessible",
+      "successMsg": "API end point is present.",
+      "failureMsg": "No API end point is present."
+    },
+
+
+
+    {
+      "id": "documentation_word_count_interoperable",
+      "field": "documentation",
+      "type": "wordCount",
+      "min": 100,
+      "level": "REQUIRED",
+      "principle": "Interoperable",
+      "successMsg": "Documentation has {count} words. Meets the minimum recommended value of 100.",
+      "failureMsg": "Documentation has {count} words. Minimum recommended is 100."
+    },
+
+    {
+      "id": "taipihub_optional_interoperable",
+      "field": "metadataCode",
+      "type": "exists",
+      "level": "OPTIONAL",
+      "principle": "Interoperable",
+      "successMsg": "TaipiHUB is present.",
+      "failureMsg": "No TaipiHUB is present."
+    },
+
+    {
+      "id": "api_exists_interoperable",
+      "field": "metadataIdentifier",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Interoperable",
+      "successMsg": "API is present.",
+      "failureMsg": "No API is present."
+    },
+
+
+
+    {
+      "id": "license_exists",
+      "field": "license",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Reusable",
+      "successMsg": "The document is licensed with Creative Commons {value}.",
+      "failureMsg": "No resource license is present."
+    },
+
+    {
+      "id": "award_exists",
+      "field": "award",
+      "type": "exists",
+      "level": "REQUIRED",
+      "principle": "Reusable",
+      "successMsg": "At least one award number is present.",
+      "failureMsg": "No award number is present."
+    }
+
+  ],
+
+  "info": [
+
+    {
+      "field": "resourceType",
+      "principle": "Findable",
+      "message": "The resource type is: {value}"
+    }
+
+  ]
+}
